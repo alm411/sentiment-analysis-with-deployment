@@ -11,6 +11,20 @@ nltk.download('wordnet')
 model=pickle.load(open("models/model.pkl",'rb'))
 vectorizer=pickle.load(open("models/vectorizer.pkl",'rb'))
 
+page_bg_img = f"""
+<style>
+[data-testid="stAppViewContainer"] > .main {{
+background: rgb(173, 216, 230);
+}}
+
+[data-testid="stHeader"] {{
+background: rgba(0,0,0,0);
+}}
+</style>
+"""
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
 st.title('Sentiment Analysis App using ML')
 st.text('Hello, world!')
 text = st.text_input('Enter your review here')
@@ -29,4 +43,7 @@ if state:
     f"The review you have entered : <u><b>{text}</b></u>  \n"
     f"Sentiment : <u><b>{prediction[0]} review</b></u>"
 ), unsafe_allow_html=True)
+
+
+
   
