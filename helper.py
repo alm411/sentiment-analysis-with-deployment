@@ -1,5 +1,4 @@
 import pandas as pd ## lib for tabular data
-import matplotlib.pyplot as plt ### lib for visualization
 import seaborn as sns  ### lib for visualization
 import re   ### for regex expressions
 from nltk.corpus import stopwords ### NLTK for NLP taskss
